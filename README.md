@@ -1,6 +1,28 @@
-[![Build Status](https://gitlab.com/Northern.tech/Mender/mender-convert/badges/next/pipeline.svg)](https://gitlab.com/Northern.tech/Mender/mender-convert/pipelines)
+# ChargeHere
+
+```
+
+./scripts/bootstrap-rootfs-overlay-hosted-server.sh \
+    --output-dir ${PWD}/rootfs_overlay_demo \
+    --tenant-token "Paste token from Mender Professional"
+```
+
+```
+sudo MENDER_ARTIFACT_NAME=release-1 ./mender-convert \
+   --disk-image input/chargectrl-netlight.img \
+   --config configs/ch_revpi3_config \
+   --overlay rootfs_overlay_demo
+```
+
+```
+sudo xz -T0 --fast -f -k -v deploy/chargectrl-netlight-raspberrypi3-mender.img
+```
+
+
 
 # mender-convert
+
+[![Build Status](https://gitlab.com/Northern.tech/Mender/mender-convert/badges/next/pipeline.svg)](https://gitlab.com/Northern.tech/Mender/mender-convert/pipelines)
 
 Mender is an open source over-the-air (OTA) software updater for embedded Linux
 devices. Mender comprises a client running at the embedded device, as well as a

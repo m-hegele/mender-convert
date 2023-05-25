@@ -1,0 +1,6 @@
+source configs/raspberrypi3_config
+source configs/images/raspberrypi_raspbian_config
+
+# 8GB and resize instead MENDER_STORAGE_TOTAL_SIZE_MB=14385
+MENDER_ARTIFACT_NAME="chargectrl-netlight"
+MENDER_CLIENT_INSTALL="y"
