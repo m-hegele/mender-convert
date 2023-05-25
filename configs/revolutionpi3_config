@@ -1,0 +1,3 @@
+source configs/raspberrypi3_config
+
+MENDER_STORAGE_TOTAL_SIZE_MB=15634
